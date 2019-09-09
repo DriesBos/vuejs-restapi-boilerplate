@@ -28,6 +28,7 @@ export default {
           .catch(error => {
             console.log(error.response);
           });
+        this.input = "";
       }
     }
   }
@@ -37,14 +38,29 @@ export default {
 <style>
 .container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
   background: #dedede;
 }
 .center-block {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  width: 50vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+input,
+button,
+p {
+  margin-bottom: 12px;
 }
 </style>
